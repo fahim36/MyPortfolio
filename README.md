@@ -1,6 +1,6 @@
-# Gazi Md. Saiful Hoque - Senior Android Developer Portfolio
+# Saiful Hoque - Senior Android Developer Portfolio
 
-A modern, responsive portfolio website showcasing 5+ years of Android development expertise, featuring projects from BJIT and SurroundApps, with specialized skills in Kotlin, Jetpack Compose, and modern Android architecture.
+A modern, responsive portfolio website showcasing 5+ years of Android development expertise, featuring Fiverr services, real-world projects, and specialized skills in Kotlin, Jetpack Compose, and modern Android architecture.
 
 ## 🌟 Features
 
@@ -13,13 +13,14 @@ A modern, responsive portfolio website showcasing 5+ years of Android developmen
 
 ## 🚀 Sections
 
-1. **Hero Section**: Senior Android Developer introduction with professional summary
-2. **About Me**: 5+ years experience, awards, and career highlights
+1. **Hero Section**: Senior Android Developer introduction with Fiverr hiring options
+2. **About Me**: 5+ years experience, certifications, and career highlights  
 3. **Experience**: Detailed timeline from Jr. to Senior Software Engineer
-4. **Skills**: Android development technologies and frameworks
-5. **Projects**: Real projects including Meter Reader App, Enzan BMS, Mobicomma
-6. **Certifications**: Awards and professional certifications
-7. **Contact**: Professional contact information and availability
+4. **Skills**: Android development technologies in compact 4-column layout
+5. **Projects**: Real projects including Meter Reader App, Enzan BMS (Bridge Management), Mobicomma (Tourism MaaS)
+6. **Hire Me**: Fiverr services with professional development offerings
+7. **Certifications**: Awards and professional certifications
+8. **Contact**: Professional contact information and social media links
 
 ## 🛠️ Technologies Used
 
@@ -35,9 +36,10 @@ A modern, responsive portfolio website showcasing 5+ years of Android developmen
 - **5+ Years Android Experience**: Senior-level expertise showcase
 - **Award Recognition**: Best Performer 2024 & 2025 at BJIT
 - **Modern Android Stack**: Kotlin, Jetpack Compose, MVVM, Hilt
-- **Real Projects**: Meter Reader App, Enzan BMS, Mobicomma, JogaJog
+- **Real Projects**: Meter Reader App, Enzan BMS (Bridge Management), Mobicomma (Tourism MaaS)
+- **Fiverr Services**: Professional Android development for hire
 - **Diverse Experience**: Enterprise apps, social networking, educational platforms
-- **Remote Work Ready**: Actively seeking remote/hybrid opportunities
+- **15+ Client Projects**: Proven track record of successful deliveries
 
 ## 🌐 Quick Deployment to GitHub Pages
 

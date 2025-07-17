@@ -2,63 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Gazi Md. Saiful Hoque - Senior Android Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Saiful Hoque - Senior Android Developer</title>
     <meta name="description" content="Senior Android Developer with 5+ years experience in Kotlin, Java, Jetpack Compose. Expert in MVVM, Firebase, and modern Android development.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Gazi Md. Saiful Hoque</a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#certifications" class="nav-link">Certifications</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+<body>    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">            <a class="navbar-brand" href="#home">
+                <span class="brand-name">Saiful Hoque</span>
+                <span class="brand-title">Senior Android Developer</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user"></i> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>                    <li class="nav-item"><a class="nav-link" href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#awards"><i class="fas fa-trophy"></i> Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hire-me"><i class="fas fa-handshake"></i> Hire Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">            <div class="hero-content">
-                <h1 class="hero-title">Hello, I'm <span class="highlight">Gazi Md. Saiful Hoque</span></h1>
-                <h2 class="hero-subtitle">Senior Android Developer</h2>
-                <p class="hero-description">
+        <div class="hero-container">            <div class="hero-content" data-aos="fade-right">
+                <h1 class="hero-title">Hello, I'm <span class="highlight">Saiful Hoque</span></h1>
+                <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Senior Android Developer</h2>
+                <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
                     Experienced Android Developer with over 5 years of expertise in designing and developing 
                     advanced Android applications using Kotlin and Java. Passionate about creating innovative 
                     mobile solutions with modern technologies like Jetpack Compose.
-                </p>
-                <div class="hero-buttons">
+                </p>                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
                     <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View My Work</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/gazi-saiful-hoque" target="_blank" class="social-link">
+                    <a href="#projects" class="btn btn-secondary">View My Work</a>                    <a href="Gazi Md. Saiful Hoque CV.docx" target="_blank" class="btn btn-outline">
+                        <i class="fas fa-file-alt"></i> View CV
+                    </a>
+                </div>                <div class="social-links" data-aos="fade-up" data-aos-delay="800">
+                    <a href="https://www.linkedin.com/in/saiful-hoque/" target="_blank" class="social-link">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/gazisaiful" target="_blank" class="social-link">
+                    <a href="https://github.com/fahim36" target="_blank" class="social-link">
                         <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.fiverr.com/knightmare36/develop-native-android-apps-using-kotlin-and-jetpack-compose" target="_blank" class="social-link fiverr-link">
+                        <i class="fas fa-briefcase"></i>
                     </a>
                     <a href="mailto:saifulhoque30@gmail.com" class="social-link">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
-            </div>            <div class="hero-image">
-                <div class="image-placeholder">
-                    <i class="fab fa-android"></i>
+            </div>            <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
+                <div class="profile-image">
+                    <img src="My Photo.jpg" alt="Saiful Hoque" class="profile-pic">
+                    <div class="image-overlay">
+                        <i class="fab fa-android"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,11 +91,10 @@
                         and developing advanced Android applications. Skilled in collaborating with cross-functional 
                         teams, integrating external data sources and APIs, and adopting new technologies to maximize 
                         development efficiency.
-                    </p>
-                    <p class="about-description">
+                    </p>                    <p class="about-description">
                         My experience spans across modern Android development using Kotlin, Java, and Jetpack Compose, 
                         with expertise in MVVM architecture, Firebase integration, and cutting-edge technologies 
-                        including AI, AR/VR platforms. Currently seeking new remote or hybrid opportunities.
+                        including AI, AR/VR platforms.
                     </p>
                     <div class="about-stats">
                         <div class="stat">
@@ -86,20 +102,11 @@
                             <p>Years Experience</p>
                         </div>
                         <div class="stat">
-                            <h3>10+</h3>
-                            <p>Projects Completed</p>
+                            <h3>15+</h3>
+                            <p>Client Projects Completed</p>
                         </div>
-                        <div class="stat">
-                            <h3>2x</h3>
-                            <p>Best Performer Awards</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                </div>
+                    </div>                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -145,78 +152,92 @@
                         <h3>Education</h3>
                         <h4>Master's & Bachelor's Degrees</h4>
                         <span class="timeline-date">2019 - 2022</span>
-                        <p>Strong academic foundation in Computer Science and Information Technology.</p>
-                        <ul>
+                        <p>Strong academic foundation in Computer Science and Information Technology.</p>                        <ul>
                             <li>MSc in IT - Dhaka University (2022)</li>
                             <li>BSc in CSE - Bangladesh Army International University (2019)</li>
-                            <li>Specialized in software engineering and mobile development</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Skills Section -->
+    </section>    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Mobile Development</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Kotlin</span>
-                        <span class="skill-item">Java</span>
-                        <span class="skill-item">Jetpack Compose</span>
-                        <span class="skill-item">Android SDK</span>
-                        <span class="skill-item">MVVM</span>
-                        <span class="skill-item">Retrofit</span>
+            <h2 class="section-title" data-aos="fade-up">Skills & Technologies</h2>
+            <div class="skills-container-simple">
+                <div class="skill-category-simple" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-header">
+                        <i class="fab fa-android skill-icon"></i>
+                        <h3>Mobile Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kotlin</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Jetpack Compose</span>
+                        <span class="skill-tag">Android SDK</span>
+                        <span class="skill-tag">MVVM</span>
+                        <span class="skill-tag">Retrofit</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Frameworks & Libraries</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Hilt</span>
-                        <span class="skill-item">Dagger2</span>
-                        <span class="skill-item">Coroutines</span>
-                        <span class="skill-item">Room</span>
-                        <span class="skill-item">Navigation Component</span>
-                        <span class="skill-item">Firebase</span>
+                
+                <div class="skill-category-simple" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-header">
+                        <i class="fas fa-cogs skill-icon"></i>
+                        <h3>Frameworks & Libraries</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Hilt</span>
+                        <span class="skill-tag">Dagger2</span>
+                        <span class="skill-tag">Coroutines</span>
+                        <span class="skill-tag">Room</span>
+                        <span class="skill-tag">Navigation Component</span>
+                        <span class="skill-tag">Firebase</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Backend & Database</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Spring Boot</span>
-                        <span class="skill-item">Hibernate</span>
-                        <span class="skill-item">PostgreSQL</span>
-                        <span class="skill-item">MySQL</span>
-                        <span class="skill-item">.NET Core</span>
-                        <span class="skill-item">MSSQL</span>
+                
+                <div class="skill-category-simple" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-header">
+                        <i class="fas fa-database skill-icon"></i>
+                        <h3>Backend & Database</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Hibernate</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">.NET Core</span>
+                        <span class="skill-tag">MSSQL</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Emerging Technologies</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">AR/VR</span>
-                        <span class="skill-item">Unity</span>
-                        <span class="skill-item">Vuforia</span>
-                        <span class="skill-item">ARCore</span>
-                        <span class="skill-item">ML Kit</span>
-                        <span class="skill-item">AI Integration</span>
+                
+                <div class="skill-category-simple" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-header">
+                        <i class="fas fa-vr-cardboard skill-icon"></i>
+                        <h3>Emerging Technologies</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AR/VR</span>
+                        <span class="skill-tag">Unity</span>
+                        <span class="skill-tag">Vuforia</span>
+                        <span class="skill-tag">ARCore</span>
+                        <span class="skill-tag">ML Kit</span>
+                        <span class="skill-tag">AI Integration</span>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Projects Section -->
+    </section><!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>            <div class="projects-grid">
-                <div class="project-card">
+            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
                     <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-tachometer-alt"></i>
+                        <img src="Meter Reader App.png" alt="Meter Reader App" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <span class="project-status">Enterprise Project</span>
+                            </div>
                         </div>
                     </div>
                     <div class="project-content">
@@ -229,61 +250,53 @@
                             <span>Firebase</span>
                             <span>Hilt</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#contact" class="project-link">
-                                <i class="fas fa-envelope"></i> Contact for Demo
-                            </a>
-                        </div>
                     </div>
-                </div>
-                <div class="project-card">
+                </div>                <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
                     <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-battery-full"></i>
+                        <div class="project-placeholder bms">
+                            <i class="fas fa-road"></i>
+                            <span>Bridge Management</span>
                         </div>
                     </div>
                     <div class="project-content">
                         <h3>Enzan BMS</h3>
-                        <p>Full Android development cycle for Battery Management System including project architecture, development, QA, deployment, and cross-team collaboration.</p>
+                        <p>Bridge Management System that contains comprehensive information about bridge building progress and reported issues. Full Android development cycle including project architecture, development, QA, and deployment.</p>
                         <div class="project-tech">
                             <span>Kotlin</span>
                             <span>Android</span>
                             <span>MVVM</span>
-                            <span>REST APIs</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#contact" class="project-link">
-                                <i class="fas fa-envelope"></i> Contact for Demo
-                            </a>
+                            <span>Infrastructure</span>
+                            <span>Progress Tracking</span>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
                     <div class="project-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-comments"></i>
+                        <img src="mobicomma.webp" alt="Mobicomma" class="project-img">
+                        <div class="project-overlay">
+                            <div class="project-info">
+                                <span class="project-status">Tourism MaaS Service</span>
+                            </div>
                         </div>
                     </div>
                     <div class="project-content">
                         <h3>Mobicomma</h3>
-                        <p>Communication platform with advanced features including Firebase integration, real-time messaging, and Zenrin Map SDK integration.</p>
+                        <p>Tourism MaaS service that makes car travel enjoyable. Users can share information via in-car tablets, create travel plans freely, receive destination and hidden spot information, plus enjoy karaoke and conversation roulette features.</p>
                         <div class="project-tech">
-                            <span>Kotlin</span>
-                            <span>Firebase</span>
-                            <span>Coroutines</span>
-                            <span>Map SDK</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#contact" class="project-link">
-                                <i class="fas fa-envelope"></i> Contact for Demo
-                            </a>
+                            <span>Android</span>
+                            <span>Tourism MaaS</span>
+                            <span>Tablet UI</span>
+                            <span>Real-time Content</span>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
                     <div class="project-image">
-                        <div class="image-placeholder">
+                        <div class="project-placeholder social">
                             <i class="fas fa-users"></i>
+                            <span>Social Networking</span>
                         </div>
                     </div>
                     <div class="project-content">
@@ -295,17 +308,14 @@
                             <span>REST APIs</span>
                             <span>XML UI</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#contact" class="project-link">
-                                <i class="fas fa-envelope"></i> Contact for Demo
-                            </a>
-                        </div>
                     </div>
                 </div>
-                <div class="project-card">
+                
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="500">
                     <div class="project-image">
-                        <div class="image-placeholder">
+                        <div class="project-placeholder education">
                             <i class="fas fa-graduation-cap"></i>
+                            <span>Educational Platform</span>
                         </div>
                     </div>
                     <div class="project-content">
@@ -317,33 +327,58 @@
                             <span>Dynamic UI</span>
                             <span>Multi-device</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#contact" class="project-link">
-                                <i class="fas fa-envelope"></i> Contact for Demo
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications">
+        </div>
+    </section>    <!-- Awards Section -->
+    <section id="awards" class="awards">
         <div class="container">
-            <h2 class="section-title">Certifications & Awards</h2>
-            <div class="certifications-grid">
-                <div class="certification-card award">
-                    <div class="cert-icon">
+            <h2 class="section-title" data-aos="fade-up">Awards & Recognition</h2>
+            <div class="awards-grid">
+                <div class="award-card" data-aos="flip-up" data-aos-delay="100">
+                    <div class="award-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
-                    <div class="cert-content">
-                        <h3>Best Performer of the Year</h3>
-                        <h4>BJIT</h4>
-                        <span class="cert-year">2024 & 2025</span>
-                        <p>Recognized for outstanding performance and contributions to Android development projects.</p>
+                    <div class="award-content">
+                        <h3>Best Performer of the Year 2025</h3>
+                        <h4>BJIT Limited</h4>
+                        <span class="award-year">2025</span>
+                        <p>Recognized for exceptional performance and outstanding contributions to Android development projects, demonstrating leadership and technical excellence.</p>
                     </div>
                 </div>
-                <div class="certification-card">
+                
+                <div class="award-card" data-aos="flip-up" data-aos-delay="200">
+                    <div class="award-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="award-content">
+                        <h3>Best Performer of the Year 2024</h3>
+                        <h4>BJIT Limited</h4>
+                        <span class="award-year">2024</span>
+                        <p>Honored for consistently delivering high-quality Android applications and maintaining excellent performance standards throughout the year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Professional Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card" data-aos="slide-up" data-aos-delay="100">
+                    <div class="cert-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Build ASP.NET Core Web API Scratch To Finish (.NET8 API)</h3>
+                        <h4>Udemy</h4>
+                        <span class="cert-year">2025</span>
+                        <p>Comprehensive training in building modern web APIs using .NET 8, covering best practices, security, and performance optimization.</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card" data-aos="slide-up" data-aos-delay="200">
                     <div class="cert-icon">
                         <i class="fab fa-android"></i>
                     </div>
@@ -351,10 +386,23 @@
                         <h3>Android Jetpack Compose with Retrofit, Room, and Hilt in Kotlin</h3>
                         <h4>Udemy</h4>
                         <span class="cert-year">2024</span>
-                        <p>Advanced certification in modern Android development with latest frameworks and libraries.</p>
+                        <p>Advanced certification in modern Android development with latest frameworks and libraries, focusing on Jetpack Compose and dependency injection.</p>
                     </div>
                 </div>
-                <div class="certification-card">
+                
+                <div class="certification-card" data-aos="slide-up" data-aos-delay="300">
+                    <div class="cert-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Supervised Machine Learning: Regression and Classification</h3>
+                        <h4>Coursera</h4>
+                        <span class="cert-year">2023</span>
+                        <p>Comprehensive course on machine learning fundamentals, covering regression and classification algorithms with practical applications.</p>
+                    </div>
+                </div>
+                
+                <div class="certification-card" data-aos="slide-up" data-aos-delay="400">
                     <div class="cert-icon">
                         <i class="fas fa-code"></i>
                     </div>
@@ -362,8 +410,50 @@
                         <h3>Clean Architecture in Android Using SOLID Principles and MVVM</h3>
                         <h4>Udemy</h4>
                         <span class="cert-year">2022</span>
-                        <p>Specialized training in clean architecture patterns and best practices for Android development.</p>
+                        <p>Specialized training in clean architecture patterns and best practices for Android development, emphasizing maintainable and testable code.</p>
                     </div>
+                </div>
+            </div>
+        </div>    </section>
+
+    <!-- Hire Me Section -->
+    <section id="hire-me" class="hire-me">
+        <div class="container">
+            <div class="hire-content" data-aos="fade-up">
+                <h2 class="section-title">Ready to Build Your Android App?</h2>
+                <p class="hire-description">
+                    Looking for a professional Android developer? I offer comprehensive Android development services 
+                    on Fiverr with over 5+ years of experience in Kotlin, Jetpack Compose, and modern Android technologies.
+                </p>
+                <div class="hire-features">
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Native Android Apps</h4>
+                        <p>Kotlin & Java development with Jetpack Compose</p>
+                    </div>
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <h4>API Integration</h4>
+                        <p>Firebase, REST APIs, and third-party integrations</p>
+                    </div>
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-paint-brush"></i>
+                        <h4>UI/UX Design</h4>
+                        <p>Modern interfaces with excellent user experience</p>
+                    </div>
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-headset"></i>
+                        <h4>Full Support</h4>
+                        <p>Clean code, documentation, and post-launch support</p>
+                    </div>
+                </div>
+                <div class="hire-buttons" data-aos="fade-up" data-aos-delay="500">
+                    <a href="https://www.fiverr.com/knightmare36/develop-native-android-apps-using-kotlin-and-jetpack-compose" target="_blank" class="btn btn-primary fiverr-btn">
+                        <i class="fas fa-briefcase"></i> Hire Me on Fiverr
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Contact Directly
+                    </a>
                 </div>
             </div>
         </div>
@@ -375,7 +465,7 @@
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">                <div class="contact-info">
                     <h3>Let's work together!</h3>
-                    <p>I'm actively seeking new remote or hybrid opportunities as a Senior Android Developer. Feel free to reach out if you'd like to collaborate or discuss Android development projects.</p>
+                    <p>I'm actively seeking new opportunities as a Senior Android Developer. Feel free to reach out if you'd like to collaborate or discuss Android development projects.</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
@@ -388,10 +478,6 @@
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <span>Dhaka, Bangladesh</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-briefcase"></i>
-                            <span>Open to Remote/Hybrid Opportunities</span>
                         </div>
                     </div>
                 </div>
@@ -412,23 +498,24 @@
                 </form>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
+    </section>    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Gazi Md. Saiful Hoque. All rights reserved.</p>
+                <p>&copy; 2025 Saiful Hoque. All rights reserved.</p>
                 <div class="footer-links">
                     <a href="#home">Home</a>                    <a href="#about">About</a>
                     <a href="#projects">Projects</a>
                     <a href="#certifications">Certifications</a>
+                    <a href="#hire-me">Hire Me</a>
                     <a href="#contact">Contact</a>
                 </div>
             </div>
         </div>
-    </footer>
-
+    </footer>    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
