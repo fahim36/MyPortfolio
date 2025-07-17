@@ -8,7 +8,7 @@ A modern, responsive portfolio website showcasing 5+ years of Android developmen
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: [https://your-username.github.io](https://your-username.github.io)
+Visit the live portfolio: [https://saiful-hoque.netlify.app](https://saiful-hoque.netlify.app)
 
 ## ✨ Features
 
