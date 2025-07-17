@@ -20,15 +20,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
+// Navbar background on scroll - REMOVED to keep fixed background
 
 // Active navigation link highlighting
 window.addEventListener('scroll', () => {
@@ -49,6 +41,22 @@ window.addEventListener('scroll', () => {
         if (link.getAttribute('href') === `#${current}`) {
             link.classList.add('active');
         }
+    });
+});
+
+// Ensure clicked nav links stay white
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove active from all links
+            navLinks.forEach(l => {
+                l.classList.remove('active');
+            });
+            
+            // Add active to clicked link
+            this.classList.add('active');
+        });
     });
 });
 
@@ -118,29 +126,52 @@ if (contactForm) {
     });
 }
 
-// Typing effect for hero subtitle
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
+// Advanced typing effect with multiple texts
+function multipleTypeWriter(element, texts, speed = 100, deleteSpeed = 50, pauseTime = 2000) {
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
     
     function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
+        const currentText = texts[textIndex];
+        
+        if (isDeleting) {
+            element.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            element.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
         }
+        
+        let typeSpeed = isDeleting ? deleteSpeed : speed;
+        
+        if (!isDeleting && charIndex === currentText.length) {
+            typeSpeed = pauseTime;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+            typeSpeed = 500;
+        }
+        
+        setTimeout(type, typeSpeed);
     }
     
     type();
 }
 
-// Initialize typing effect when page loads
+// Initialize multiple typing effect when page loads
 window.addEventListener('load', () => {
     const heroSubtitle = document.querySelector('.hero-subtitle');
     if (heroSubtitle) {
-        const originalText = heroSubtitle.textContent;
+        const texts = [
+            'Kotlin Expert',
+            'Senior Android Developer',
+            'Jetpack Compose Enthusiast',
+            'Mobile App Architect'
+        ];
         setTimeout(() => {
-            typeWriter(heroSubtitle, originalText, 100);
+            multipleTypeWriter(heroSubtitle, texts, 100, 50, 2000);
         }, 1000);
     }
 });
@@ -265,3 +296,137 @@ window.addEventListener('load', () => {
         AOS.refresh();
     }, 100);
 });
+
+// Dynamic CV Download Handler
+document.addEventListener('DOMContentLoaded', () => {
+    // Handle both the old CV button (if exists) and the new navigation CV button
+    const cvButton = document.getElementById('cv-download-btn');
+    const cvNavButton = document.getElementById('cv-download-nav');
+    
+    function handleCVDownload(e) {
+        e.preventDefault();
+        
+        // Get the current location to build the proper CV path
+        const baseUrl = window.location.origin + window.location.pathname.replace('index.html', '');
+        const cvPath = baseUrl + 'assets/documents/Gazi Md. Saiful Hoque CV.pdf';
+        
+        // Create a temporary link element for download
+        const link = document.createElement('a');
+        link.href = cvPath;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        
+        // For production (GitHub Pages), use the relative path
+        if (window.location.protocol === 'https:' || window.location.hostname !== '') {
+            link.href = 'assets/documents/Gazi Md. Saiful Hoque CV.pdf';
+        }
+        
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        
+        showNotification('Opening CV...', 'success');
+    }
+    
+    if (cvButton) {
+        cvButton.addEventListener('click', handleCVDownload);
+    }
+    
+    if (cvNavButton) {
+        cvNavButton.addEventListener('click', handleCVDownload);
+    }
+});
+
+// Mobile navigation toggle functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navClose = document.querySelector('.nav-close');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    // Initialize Bootstrap Collapse
+    let bsCollapse;
+    if (navbarCollapse) {
+        bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false
+        });
+    }
+    
+    function closeMobileNav() {
+        if (bsCollapse) {
+            bsCollapse.hide();
+        }
+        navbarCollapse.classList.remove('show');
+        navbarToggler.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+    
+    function openMobileNav() {
+        if (bsCollapse) {
+            bsCollapse.show();
+        }
+        navbarCollapse.classList.add('show');
+        navbarToggler.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    if (navbarToggler && navbarCollapse) {
+        // Close button functionality
+        if (navClose) {
+            navClose.addEventListener('click', closeMobileNav);
+        }
+        
+        // Close mobile menu when clicking nav links
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                closeMobileNav();
+            });
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navbarToggler.contains(e.target) && 
+                !navbarCollapse.contains(e.target) && 
+                navbarCollapse.classList.contains('show')) {
+                closeMobileNav();
+            }
+        });
+        
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
+                closeMobileNav();
+            }
+        });
+        
+        // Listen to Bootstrap collapse events
+        navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+            document.body.style.overflow = '';
+        });
+        
+        navbarCollapse.addEventListener('shown.bs.collapse', () => {
+            document.body.style.overflow = 'hidden';
+        });
+    }
+});
+
+// Skills animation on scroll
+const observeSkills = () => {
+    const skillBars = document.querySelectorAll('.skill-progress');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progressBar = entry.target;
+                const percentage = progressBar.getAttribute('data-percentage') || '90';
+                setTimeout(() => {
+                    progressBar.style.width = percentage + '%';
+                }, 300);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    skillBars.forEach(bar => observer.observe(bar));
+};
+
+// Initialize skills animation when DOM is loaded
+document.addEventListener('DOMContentLoaded', observeSkills);
